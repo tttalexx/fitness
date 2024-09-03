@@ -2,12 +2,12 @@ import requests
 
 def send_sms(phone_number, message):
     url = "https://api.turbosms.ua/message/send.json"
-    api_key = "YOUR_TURBOSMS_API_KEY"  # Замените на ваш API-ключ
+    api_key = "8b21cdea4d152f36e9ace51467da09048f871529" 
     
     payload = {
         "recipients": [phone_number],
         "text": message,
-        "sender": "YourSenderName"  # Замените на имя отправителя, зарегистрированное в TurboSMS
+        "sender": "MaryCoach"
     }
     headers = {
         "Authorization": f"Bearer {api_key}"

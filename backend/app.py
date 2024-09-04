@@ -1,4 +1,6 @@
 from flask import Flask
+from auth import auth_bp
+from views import main_bp
 from backend.auth import auth_bp
 from backend.views import main_bp
 

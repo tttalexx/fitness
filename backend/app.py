@@ -5,7 +5,7 @@ from backend.auth import auth_bp
 from backend.views import main_bp
 
 app = Flask(__name__)
-app.config.from_object('config.settings')
+app.config.from_object('backend.configuration')
 
 # Подключаем маршруты из auth.py и views.py
 app.register_blueprint(auth_bp)

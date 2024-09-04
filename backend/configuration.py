@@ -11,7 +11,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG = False
 
-config = {
+settings = {
     'development': DevelopmentConfig,
     'production': ProductionConfig
 }

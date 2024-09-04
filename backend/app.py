@@ -1,7 +1,9 @@
-from flask import Flask
+import sys
 import os
-from backend.auth import auth_bp
-from backend.views import main_bp
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+from flask import Flask
+from auth import auth_bp
+from views import main_bp
 
 # Указываем путь к папке с шаблонами, которая находится в frontend/templates
 app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'frontend/templates'))

@@ -1,11 +1,11 @@
 from flask import Flask
-from auth import auth_bp
-from views import main_bp
+import os
 from backend.auth import auth_bp
 from backend.views import main_bp
 
-app = Flask(__name__)
-app.config.from_object('backend.configuration')
+# Указываем путь к папке с шаблонами, которая находится в frontend/templates
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'frontend/templates'))
+app.config.from_object('config.settings')
 
 # Подключаем маршруты из auth.py и views.py
 app.register_blueprint(auth_bp)

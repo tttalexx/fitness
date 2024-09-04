@@ -7,7 +7,7 @@ from backend.models import db
 from flask import Flask
 
 app = Flask(__name__)
-app.config.from_object('config.settings')
+app.config.from_object('configuration.settings')
 
 # Подключаем маршруты из auth.py и views.py
 app.register_blueprint(auth_bp)

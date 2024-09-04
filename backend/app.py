@@ -1,11 +1,9 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
 from backend.auth import auth_bp
 from backend.views import main_bp
 from backend.models import db
-
 from flask import Flask
 
 app = Flask(__name__)
